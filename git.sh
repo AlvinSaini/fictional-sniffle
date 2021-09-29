@@ -76,4 +76,21 @@ function log(){
 function graph(){
 	$graph_cmd
 }
-export push rpush dpush rcommit dcommit clone rclone status log graph
+
+# configration 
+function git_config(){
+	git config --global user.name "$1"
+	git config --global user.email "$2"
+}
+
+# checkouts
+function checkout(){
+	git checkout $1
+}
+
+# list branches
+function branches(){
+	git branch
+}
+
+export push rpush dpush rcommit dcommit clone rclone status log graph git_config checkout branches
