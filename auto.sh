@@ -10,5 +10,13 @@ function makemig(){
 function migrate(){
 	python manage.py migrate
 }
-
-export env djrun makemig migrate
+function lit(){
+        streamlit run $1
+}
+function lab(){
+        jupyter lab
+}
+function install(){
+        pkg install git python3 ssh 
+}
+export env djrun makemig migrate lit lab install
